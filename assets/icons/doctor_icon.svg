@@ -1,0 +1,31 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <title>ICONS Sets_v3</title>
+  <g id="Doctor_nurses_patient" data-name="Doctor nurses patient">
+    <g>
+      <path d="M70.5,71.7A25.33,25.33,0,0,1,80.7,91.9c0,14.1-11.9,25.6-26.6,25.6S27.5,106,27.5,91.9a25.17,25.17,0,0,1,9.3-19.4" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M36.8,71.1c.3-.2.5-.5.8-.6" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M17,160.2c0-23.6,16.6-42.7,37.2-42.7,13.4,0,25.6,9.8,31.8,20.5" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M37.6,72c-.4-1.2-.8-2.4-1.2-3.5-.9-2.5-2-5-3-7.5l-1.8-5.1a.37.37,0,0,1-.1-.3c.9-.5,1.9-1.1,2.8-1.7a44.15,44.15,0,0,1,10.4-4.1,40,40,0,0,1,10.9-1.1,37.7,37.7,0,0,1,15.8,4c1.7.8,3.2,1.8,4.8,2.7.5.3.6.5.4,1.1-.6,1.7-1.2,3.4-1.8,5-1.1,2.9-2.2,5.7-3.4,8.6-.2.7-.5,1.4-.7,2.2A57.39,57.39,0,0,0,37.6,72Z" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <line x1="47.8" y1="58.7" x2="60.5" y2="58.7" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <line x1="54" y1="52.3" x2="54" y2="65" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <polyline points="34 124.3 54 149.7 74.2 124.3" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    </g>
+    <g>
+      <circle cx="190.4" cy="90.5" r="26.7" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M159.7,137.5c6.1-9.9,17.9-19.9,31.1-19.8,17.6.1,35.7,14.4,37.3,40.4" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M170.5,170.8a11.08,11.08,0,0,0,6.3,1.9h37.3c8.2,0,13.9-5.9,13.9-14.6" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M193.2,153.2H176.9a10.83,10.83,0,0,0-7.7,3.1" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <polygon points="191.9 172.8 215.4 172.8 208.3 122.9 199 118.8 191.9 172.8" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+    </g>
+    <g>
+      <circle cx="121.7" cy="85.2" r="34.5" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M73.4,177.3c0-31.8,21.6-57.6,48.3-57.6S170,145.5,170,177.3" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <line x1="150.7" y1="131.3" x2="140.2" y2="157.2" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <line x1="94.3" y1="130" x2="100.1" y2="144.2" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <circle cx="137" cy="165" r="6.9" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <path d="M92.6,163.6a12.91,12.91,0,0,1-1.2-7.1,13.8,13.8,0,0,1,15-12.5,14,14,0,0,1,11.3,8" style="fill: none;stroke: #005eb8;stroke-linecap: round;stroke-linejoin: round;stroke-width: 4px"/>
+      <circle cx="93.8" cy="165" r="3.5" style="fill: #005eb8"/>
+      <circle cx="117.8" cy="152.8" r="3.5" style="fill: #005eb8"/>
+    </g>
+  </g>
+</svg>
