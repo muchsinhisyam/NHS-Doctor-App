@@ -25,7 +25,6 @@ class LoginWithButton extends StatelessWidget {
         width: 30,
         height: 30,
       ),
-
     );
   }
 }
