@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../../user.dart';
 import '../../color_constant.dart';
 
@@ -64,6 +65,7 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -73,7 +75,7 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
           color: Colors.white, //change your color here
         ),
         centerTitle: true,
-        title: Text("All Appointments", style: TextStyle(color: Colors.white),),
+        title: SvgPicture.asset("assets/icons/antemr_logo2_white.svg", width: size.width*0.4,),
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -81,14 +83,22 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
         verticalDirection: VerticalDirection.down,
         children: <Widget>[
           Center(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: dataBody()
-              )
+            child: Column(
+              children:<Widget>[
+                Text(
+                  "All Appointments Table",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                ),
+                SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: dataBody()
+                    )
+                ),
+              ]
             ),
-          )
+          ),
         ],
       ),
     );

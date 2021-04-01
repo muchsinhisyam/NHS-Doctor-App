@@ -1,6 +1,6 @@
-import 'package:doctorapp/Screens/Appointments/incoming_appointments.dart';
+import 'package:doctorapp/Screens/Appointments/all_appointments.dart';
 import 'package:doctorapp/Screens/Dashboard/Components/dashboard_button.dart';
-import 'package:doctorapp/Screens/Login/login_screen.dart';
+import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,9 +20,24 @@ class Body extends StatelessWidget {
               backgroundColor: mPrimaryColor,
               elevation: 1,
               centerTitle: true,
-              leading: Icon(Icons.menu, color: Colors.white, size: size.width*0.1,),
+              iconTheme: IconThemeData(
+                color: Colors.white, //change your color here
+              ),
+              leading: Icon(Icons.menu, size: size.width*0.08,),
               actions: <Widget>[
-                Icon(Icons.logout, size: size.width*0.1, color: Colors.white,),
+                FlatButton(
+                  child: Icon(Icons.person, size: size.width*0.1, color: Colors.white,),
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context){
+                          return ProfileScreen();
+                        },
+                      ),
+                    );
+                  },
+                )
               ],
             ),
             Padding(
@@ -73,6 +88,7 @@ class Body extends StatelessWidget {
                       iconSelected: Icons.cancel,
                       iconColor: Colors.white,
                       buttonText: "Canceled Appointments",
+                      press: (){},
                     ),
                   ],
                 ),
