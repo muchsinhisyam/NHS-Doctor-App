@@ -1,3 +1,4 @@
+import 'package:doctorapp/Screens/Appointments/appointment_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../user.dart';
@@ -45,7 +46,17 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
             (user) => DataRow(
                 cells: [
                   DataCell(
-                    Text(user.firstname),
+                      Text(user.firstname),
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context){
+                              return AppointmentsDetail();
+                            },
+                          ),
+                        );
+                      },
                   ),
                   DataCell(
                     Text(user.lastname),
@@ -75,7 +86,7 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
           color: Colors.white, //change your color here
         ),
         centerTitle: true,
-        title: SvgPicture.asset("assets/icons/antemr_logo2_white.svg", width: size.width*0.4,),
+        title: Text("All Appointments Data", style: TextStyle(color: Colors.white),),
       ),
       body: Column(
         mainAxisSize: MainAxisSize.min,
@@ -85,9 +96,8 @@ class _AllAppointmentScreenState extends State<AllAppointmentScreen> {
           Center(
             child: Column(
               children:<Widget>[
-                Text(
-                  "All Appointments Table",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                SizedBox(
+                  height: size.height *0.01
                 ),
                 SingleChildScrollView(
                     scrollDirection: Axis.vertical,

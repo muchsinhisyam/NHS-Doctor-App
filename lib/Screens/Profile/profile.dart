@@ -1,5 +1,6 @@
 import 'package:doctorapp/Screens/Login/login_screen.dart';
 import 'package:doctorapp/Screens/Profile/Components/body.dart';
+import 'package:doctorapp/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -29,7 +30,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
         actions: <Widget>[
           FlatButton(
             child: Icon(Icons.logout, size: size.width*0.08, color: Colors.white,),
-            onPressed: (){},
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context){
+                    return WelcomeScreen();
+                  },
+                ),
+              );
+            },
           )
         ],
       ),
