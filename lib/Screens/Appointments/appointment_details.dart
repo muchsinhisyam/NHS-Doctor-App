@@ -1,10 +1,12 @@
-import 'package:doctorapp/Screens/Appointments/all_appointments.dart';
+import 'package:doctorapp/Screens/Components/rounded_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import '../../color_constant.dart';
 
 class AppointmentsDetail extends StatefulWidget {
+  List list;
+  int index;
+  AppointmentsDetail({this.index, this.list});
+
   @override
   _AppointmentsState createState() => _AppointmentsState();
 }
@@ -12,13 +14,11 @@ class AppointmentsDetail extends StatefulWidget {
 class _AppointmentsState extends State<AppointmentsDetail> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: getBody(),
       appBar: AppBar(
-        title: Text("Patient Detail Info", style: TextStyle(color: Colors.white),),
+        title: Text("Appointment Detail", style: TextStyle(color: Colors.white),),
         backgroundColor: mPrimaryColor,
         elevation: 1,
         centerTitle: true,
@@ -69,7 +69,7 @@ class _AppointmentsState extends State<AppointmentsDetail> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           TextLabel("Patient Name"),
-                          TextData("Muchsin Hisyam"),
+                          TextData(widget.list[widget.index]['fname'] + " " + widget.list[widget.index]['lname']),
                         ],
                       )
                     ],
@@ -78,12 +78,25 @@ class _AppointmentsState extends State<AppointmentsDetail> {
                   TextLabel("Description"),
                   TextData("I have a stomache"),
                   SizedBox(height: size.height *0.04),
+                  TextLabel("Appointment Status"),
+                  TextData("On Progress"),
+                  SizedBox(height: size.height *0.04),
+                  TextLabel("Appointment Date & Time"),
+                  TextData("12-02-2000 | @12.00 P.M."),
+                  SizedBox(height: size.height *0.04),
                   TextLabel("Address"),
                   TextData("Jalan Senayan No. 18, 12075, Jakarta, Indonesia."),
                   SizedBox(height: size.height *0.04),
                   TextLabel("Phone"),
                   TextData("+6281-2345-6789"),
                   SizedBox(height: size.height *0.04),
+                  RoundedButton(
+                    text: "Cancel Appointment",
+                    color: Colors.red,
+                    textColor: Colors.white,
+                    fontSize: 16,
+                    press: (){},
+                  ),
                 ],
               ),
             ),

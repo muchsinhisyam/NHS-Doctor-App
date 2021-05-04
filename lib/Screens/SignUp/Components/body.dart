@@ -9,12 +9,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../color_constant.dart';
 
-class Body extends StatelessWidget {
-//  const Body({
-//    Key key
-//  }) : super(key: key);
-
+class Body extends StatefulWidget {
   @override
+  _BodyState createState() => _BodyState();
+}
+
+class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Background(

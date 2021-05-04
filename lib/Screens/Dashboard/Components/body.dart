@@ -1,4 +1,5 @@
 import 'package:doctorapp/Screens/Appointments/all_appointments.dart';
+import 'package:doctorapp/Screens/Appointments/appointments.dart';
 import 'package:doctorapp/Screens/Dashboard/Components/dashboard_button.dart';
 import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
@@ -73,7 +74,7 @@ class Body extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context){
-                              return AllAppointmentScreen();
+                              return AppointmentsScreen();
                             },
                           ),
                         );
