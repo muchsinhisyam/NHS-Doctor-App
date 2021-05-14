@@ -2,7 +2,7 @@ import 'package:doctorapp/Screens/Components/already_have_an_account_check.dart'
 import 'package:doctorapp/Screens/Components/rounded_button.dart';
 import 'package:doctorapp/Screens/Components/rounded_input_field.dart';
 import 'package:doctorapp/Screens/Components/rounded_password_field.dart';
-import 'package:doctorapp/Screens/Login/login_screen.dart';
+import 'package:doctorapp/Screens/Login/login.dart';
 import 'package:doctorapp/Screens/SignUp/Components/background.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -55,7 +55,7 @@ class _BodyState extends State<Body> {
               login: false,
               press: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return LoginScreen();
+                  return Login();
                 },),);
               },
             ),

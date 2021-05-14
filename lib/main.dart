@@ -1,3 +1,5 @@
+import 'package:doctorapp/Screens/Dashboard/dashboard_screen.dart';
+import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'Screens/Welcome/welcome_screen.dart';
@@ -19,6 +21,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: mPrimaryColor,
       ),
       home: WelcomeScreen(),
+      routes: <String, WidgetBuilder>{
+        '/DashboardPage': (BuildContext context)=> new DashboardScreen(),
+        '/ProfilePage': (BuildContext context)=> new ProfileScreen(),
+      },
     );
   }
 }

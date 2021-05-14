@@ -1,4 +1,3 @@
-import 'package:doctorapp/Screens/Login/login_screen.dart';
 import 'package:doctorapp/Screens/Profile/Components/body.dart';
 import 'package:doctorapp/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';

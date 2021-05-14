@@ -1,12 +1,16 @@
-import 'package:doctorapp/Screens/Appointments/all_appointments.dart';
 import 'package:doctorapp/Screens/Appointments/appointments.dart';
 import 'package:doctorapp/Screens/Dashboard/Components/dashboard_button.dart';
+import 'package:doctorapp/Screens/Dashboard/dashboard_screen.dart';
 import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
+  final DashboardScreen user;
+
+  const Body({this.user});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -44,7 +48,7 @@ class Body extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(20),
               child: Text(
-                "Welcome, Doctor Muchsin!",
+                'Welcome, Doctor Muchsin!',
                 style: TextStyle(
                   color: mPrimaryColor,
                   fontSize: 24,

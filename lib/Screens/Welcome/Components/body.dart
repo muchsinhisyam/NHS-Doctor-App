@@ -1,5 +1,5 @@
 import 'package:doctorapp/Screens/Components/rounded_button.dart';
-import 'package:doctorapp/Screens/Login/login_screen.dart';
+import 'package:doctorapp/Screens/Login/login.dart';
 import 'package:doctorapp/Screens/SignUp/signup_screen.dart';
 import 'package:doctorapp/Screens/Welcome/Components/background.dart';
 import 'package:doctorapp/color_constant.dart';
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context){
-                      return LoginScreen();
+                      return Login();
                     },
                 ),
               );
