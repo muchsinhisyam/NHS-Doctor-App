@@ -1,6 +1,6 @@
 import 'package:doctorapp/Screens/Components/rounded_button.dart';
 import 'package:doctorapp/Screens/Login/login.dart';
-import 'package:doctorapp/Screens/SignUp/signup_screen.dart';
+import 'package:doctorapp/Screens/SignUp/signup.dart';
 import 'package:doctorapp/Screens/Welcome/Components/background.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';

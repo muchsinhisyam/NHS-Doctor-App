@@ -9,7 +9,7 @@ import 'package:doctorapp/Screens/Components/already_have_an_account_check.dart'
 import 'package:doctorapp/Screens/Components/login_with_button.dart';
 import 'package:doctorapp/Screens/Components/rounded_button.dart';
 import 'package:doctorapp/Screens/Login/Components/background.dart';
-import 'package:doctorapp/Screens/SignUp/signup_screen.dart';
+import 'package:doctorapp/Screens/SignUp/signup.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -33,7 +33,6 @@ class _LoginState extends State<Login> {
     TextEditingController pass = new TextEditingController();
 
     String msg = '';
-    String name = '';
 
     Future<List> _login() async{
       final response = await http.post("http://10.0.2.2/NHS-Flutter/login.php", body: {
