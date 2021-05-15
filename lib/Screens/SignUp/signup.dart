@@ -21,6 +21,7 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController email = new TextEditingController();
   TextEditingController pass = new TextEditingController();
+  TextEditingController confirm_pass = new TextEditingController();
 
   Future<List> _register() async {
     var response = await http.post("http://10.0.2.2/NHS-Flutter/register.php", body: {
@@ -29,19 +30,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
     });
 
     var datauser = json.decode(response.body);
-    if (datauser == "Error") {
-      Fluttertoast.showToast(
-          msg: "User already exist!",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1
-      );
-    } else {
+
+    if (datauser == "Success") {
       Fluttertoast.showToast(
           msg: "Register success",
           toastLength: Toast.LENGTH_SHORT,
           gravity: ToastGravity.CENTER,
-          timeInSecForIosWeb: 1
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.green,
+          fontSize: 20
+      );
+    } else {
+      Fluttertoast.showToast(
+          msg: "User already exist!",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          fontSize: 20
       );
     }
   }
@@ -78,13 +84,37 @@ class _SignUpScreenState extends State<SignUpScreen> {
               RoundedPasswordField(
                 hintText: "Confirm Password",
                 onChanged: (value) {},
+                controller: confirm_pass,
               ),
               RoundedButton(
                 text: "SIGN UP",
                 color: mSubColor,
                 fontSize: 16,
                 press: () {
-                  _register();
+                  // Validation
+                  if(email.text == '' || pass.text == ''){
+                    Fluttertoast.showToast(
+                        msg: "Please fill all data!",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        fontSize: 20
+                    );
+                  }
+                  else if(confirm_pass.text != pass.text){
+                    Fluttertoast.showToast(
+                        msg: "Password and Confirm password must be the same!",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        fontSize: 20
+                    );
+                  }
+                  else {
+                    _register();
+                  }
                 },
               ),
               SizedBox(height: size.height *0.02,), // Padding between widgets

@@ -11,7 +11,9 @@ import 'package:doctorapp/Screens/Components/rounded_button.dart';
 import 'package:doctorapp/Screens/Login/Components/background.dart';
 import 'package:doctorapp/Screens/SignUp/signup.dart';
 import 'package:doctorapp/color_constant.dart';
+import 'package:flutter_session/flutter_session.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:http/http.dart' as http;
 
@@ -25,34 +27,49 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  TextEditingController email = new TextEditingController();
+  TextEditingController pass = new TextEditingController();
+
+  String msg = '';
+
+  Future<List> _login() async{
+    final response = await http.post("http://10.0.2.2/NHS-Flutter/login.php", body: {
+      "email": email.text,
+      "password": pass.text,
+    });
+
+    var datauser = json.decode(response.body);
+
+    // If the app can't get the User data then login failed
+    if (datauser == "Success" && (email.text != '' || pass.text != '')) {
+      // Give token to set login session
+      await FlutterSession().set('token', email.text);
+      // Show notification
+      Fluttertoast.showToast(
+          msg: "Login success",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.green,
+          fontSize: 20
+      );
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> DashboardScreen(),),);
+    } else {
+      Fluttertoast.showToast(
+          msg: "Incorrect email or password!",
+          toastLength: Toast.LENGTH_SHORT,
+          gravity: ToastGravity.CENTER,
+          timeInSecForIosWeb: 1,
+          backgroundColor: Colors.red,
+          fontSize: 20
+      );
+    }
+
+    return datauser;
+  }
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
-    TextEditingController email = new TextEditingController();
-    TextEditingController pass = new TextEditingController();
-
-    String msg = '';
-
-    Future<List> _login() async{
-      final response = await http.post("http://10.0.2.2/NHS-Flutter/login.php", body: {
-        "email": email.text,
-        "password": pass.text,
-      });
-
-      var datauser = json.decode(response.body);
-
-      // If the app can't get the User data then login failed
-      if(datauser.length == 0){
-        setState(() {
-          msg = "Login Failed";
-        });
-      } else{
-        Navigator.pushReplacementNamed(context, '/DashboardPage');
-      }
-
-      return datauser;
-    }
 
     return Scaffold(
       body: Background(

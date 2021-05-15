@@ -4,6 +4,7 @@ import 'package:doctorapp/Screens/Dashboard/dashboard_screen.dart';
 import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_session/flutter_session.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
@@ -14,6 +15,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
     // This size provide us total height and width of our screen
     return SafeArea(
         child: Column(
@@ -45,6 +47,15 @@ class Body extends StatelessWidget {
                 )
               ],
             ),
+            
+            // Set Token and Show User's data
+            FutureBuilder(
+                future: FlutterSession().get('token'),
+                builder: (context, snapshot){
+                  return Text(snapshot.hasData? snapshot.data : "Loading...");
+                }
+            ),
+            
             Padding(
               padding: EdgeInsets.all(20),
               child: Text(
