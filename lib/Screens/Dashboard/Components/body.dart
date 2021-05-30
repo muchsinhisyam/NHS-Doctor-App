@@ -1,6 +1,7 @@
 import 'package:doctorapp/Screens/Appointments/appointments.dart';
 import 'package:doctorapp/Screens/Dashboard/Components/dashboard_button.dart';
 import 'package:doctorapp/Screens/Dashboard/dashboard_screen.dart';
+import 'package:doctorapp/Screens/Patients/patients.dart';
 import 'package:doctorapp/Screens/Profile/profile.dart';
 import 'package:doctorapp/color_constant.dart';
 import 'package:flutter/material.dart';
@@ -49,12 +50,12 @@ class Body extends StatelessWidget {
             ),
             
             // Set Token and Show User's data
-            FutureBuilder(
-                future: FlutterSession().get('token'),
-                builder: (context, snapshot){
-                  return Text(snapshot.hasData? snapshot.data : "Loading...");
-                }
-            ),
+//            FutureBuilder(
+//                future: FlutterSession().get('token'),
+//                builder: (context, snapshot){
+//                  return Text(snapshot.hasData? snapshot.data : "Loading...");
+//                }
+//            ),
             
             Padding(
               padding: EdgeInsets.all(20),
@@ -79,6 +80,16 @@ class Body extends StatelessWidget {
                       iconSelected: Icons.pending_actions,
                       iconColor: Colors.white,
                       buttonText: "Incoming Appointments",
+                      press: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context){
+                              return AppointmentsScreen();
+                            },
+                          ),
+                        );
+                      },
                     ),
                     DashboardButton(
                       iconSelected: Icons.list,
@@ -99,12 +110,31 @@ class Body extends StatelessWidget {
                       iconSelected: Icons.done_all,
                       iconColor: Colors.white,
                       buttonText: "Appointment History",
+                      press: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context){
+                              return AppointmentsScreen();
+                            },
+                          ),
+                        );
+                      },
                     ),
                     DashboardButton(
-                      iconSelected: Icons.cancel,
+                      iconSelected: Icons.person,
                       iconColor: Colors.white,
-                      buttonText: "Canceled Appointments",
-                      press: (){},
+                      buttonText: "Patients List",
+                      press: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context){
+                              return PatientsList();
+                            },
+                          ),
+                        );
+                      },
                     ),
                   ],
                 ),
