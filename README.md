@@ -7,28 +7,28 @@ An internship project by PT Inovasi Telematics Nusantara in collaboration with t
 
 ## Design
 - Welcome Screen
-![Welcome Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Home%20Screen.png)
+![Welcome Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Home%20Screen.png)
 
 - Login Screen
-![Login Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Login%20Screen.png)
+![Login Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Login%20Screen.png)
 
 - Register Screen
-![Register Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Register%20Screen.png)
+![Register Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Register%20Screen.png)
 
 - Dashboard Screen
-![Dashboard Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Dashboard%20Screen.png)
+![Dashboard Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Dashboard%20Screen.png)
 
 - Appointments Screen
-![Appointments Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Appointments%20Screen.png)
+![Appointments Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Appointments%20Screen.png)
 
 - Appointment Detail Screen (1)
-![Appointment Detail Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Appointments%20Detail%20Screen%201.png)
+![Appointments Detail Screen 1](https://user-images.githubusercontent.com/22133066/120099447-13578c00-c16e-11eb-938c-b389d4fdc3d3.png)
 
 - Appointment Detail Screen (2)
-![Appointment Detail Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Appointments%20Detail%20Screen%202.png)
+![Appointment Detail Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Appointments%20Detail%20Screen%202.png)
 
 - User Profile Screen
-![User Profile Screen]https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Profile%20Screen.png)
+![User Profile Screen](https://github.com/muchsinhisyam/NHS-Doctor-App/blob/master/design/Profile%20Screen.png)
 
 ## Getting Started
 
